@@ -1,0 +1,20 @@
+#!usr/bin/bash
+
+# Օգտագործեք
+# if պայմանը, ստուգելու համար թե ինչ տիպի
+# են վերը նշված ֆայլերը եւ ամեն ստուգման
+# մեջ անել համապատասխան echo֊ն։
+
+read FILE
+echo $FILE
+
+if test -d "$FILE"; then
+    echo "$FILE is a folder."
+        elif test -L "$FILE"; then
+        echo "$FILE is a link."
+            elif test -x "$FILE"; then
+            echo "$FILE is a executable."
+                elif test -f "$FILE"; then
+                echo "$FILE is a file."
+else echo "not found"
+fi

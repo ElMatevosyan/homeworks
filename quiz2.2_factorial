@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+function Factorial {
+N=$1
+factorial=1
+    if [[ $# -gt 1 ]] || [[ $# -lt 1 ]]; then
+    echo "մուտքագրեք միայն մեկ բնական թիվ"
+    else
+while [ $N -gt 0 ]; do
+    factorial=$(( $factorial * $N ))
+    N=$(( $N - 1 ))
+done
+echo $factorial
+    fi  
+}
+
+Factorial $1

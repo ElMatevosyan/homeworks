@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+#	Գրել
+#	սկրիպտ, որը կկարդա ձեր կողմից մուտքագրված
+#	հրամանը (որպես տեքստ) եւ ստուգումներ
+#	կատարելու միջոցով կաշխատեցնի հետեւյալ
+#	հրամանները, եթե ձեր մուտագրած հրամանը համընկնում է հետևյալ հրամանների հետ՝  1. ls
+#       2. date
+#       3. pwd
+#       4. ps -aux
+#       5. whoami
+
+read comm
+
+if [ "$comm" = "ls" ]; then
+ls  
+    elif [ "$comm" = "date" ]; then
+    date 
+        elif [ "$comm" = "pwd" ]; then
+        pwd
+            elif [ "$comm" = "ps -aux" ]; then
+            ps -aux
+                elif [ "$comm" = "whoami" ]; then
+                whoami
+else echo "command not found"
+fi

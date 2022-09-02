@@ -1,0 +1,19 @@
+#!bin/nash
+
+ filemaker(){
+     for i in {1..7}; do
+     touch a_${i}.txt; done
+     mkdir a_6 a_7
+ }
+ filemaker           #նախ ստեղծենք մի քանի ֆայլեր
+
+fileident(){
+ ls | while read file; do
+ if [ -f "$file" ]; then
+     echo "$file is a file"
+     elif [ -d "$file" ]; then
+     echo "$file is a directory";
+ break
+ fi; done
+}
+fileident
